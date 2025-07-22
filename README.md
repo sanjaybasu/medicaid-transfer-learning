@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains the complete implementation of transfer learning approaches for predicting acute care utilization in Medicaid populations across different states. The code supports the research published in npj Health Systems.
+This repository contains the complete implementation of transfer learning approaches for predicting acute care utilization in Medicaid populations across different states.
 
 ## Repository Structure
 
@@ -152,10 +152,8 @@ If you use this code in your research, please cite:
 ```bibtex
 @article{medicaid_transfer_learning_2024,
   title={Generalizing Healthcare Risk Prediction Models: A Prospective Evaluation of Transfer Learning for Predicting Acute Care Use in Medicaid Populations},
-  author={[Authors]},
-  journal={npj Health Systems},
-  year={2024},
-  doi={[DOI]}
+  author={Sanjay Basu},
+  year={2024}
 }
 ```
 
@@ -165,9 +163,5 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## Contact
 
-For questions about the code or methodology, please open an issue on GitHub or contact [contact information].
-
-## Acknowledgments
-
-This work was supported by [funding information]. We thank the state Medicaid programs for providing access to the data used in this analysis.
+For questions about the code or methodology, please open an issue on GitHub or contact sanjay.basu@waymarkcare.com.
 
