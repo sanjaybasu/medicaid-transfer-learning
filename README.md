@@ -153,7 +153,7 @@ If you use this code in your research, please cite:
 @article{medicaid_transfer_learning_2024,
   title={Generalizing Healthcare Risk Prediction Models: A Prospective Evaluation of Transfer Learning for Predicting Acute Care Use in Medicaid Populations},
   author={Sanjay Basu},
-  year={2024}
+  year={2025}
 }
 ```
 
