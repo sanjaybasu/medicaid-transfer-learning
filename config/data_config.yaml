@@ -1,0 +1,118 @@
+# Data Configuration for Transfer Learning Analysis
+
+# Data paths
+data_paths:
+  source_domain: "data/washington_medicaid.csv"
+  target_domain: "data/virginia_medicaid.csv"
+  output_dir: "results/"
+  
+# Inclusion/exclusion criteria
+inclusion_criteria:
+  age_min: 18
+  age_max: 64
+  continuous_enrollment_months: 12
+  prior_acute_care_required: true
+  care_management_enrollment: true
+  
+exclusion_criteria:
+  medicare_dual_eligible: true
+  incomplete_demographics: true
+  missing_outcome_data: true
+  
+# Feature definitions
+features:
+  demographics:
+    - "age"
+    - "gender"
+    - "race_ethnicity"
+    - "urban_rural"
+    
+  clinical_conditions:
+    - "diabetes_mellitus"
+    - "hypertension" 
+    - "heart_disease"
+    - "copd"
+    - "mental_health_disorders"
+    - "substance_abuse_disorders"
+    - "charlson_comorbidity_index"
+    
+  healthcare_utilization:
+    - "prior_ed_visits_12m"
+    - "prior_hospitalizations_12m"
+    - "prior_outpatient_visits_12m"
+    - "medication_count"
+    
+  medicaid_characteristics:
+    - "eligibility_category"
+    - "enrollment_duration"
+    - "managed_care_enrollment"
+    
+  geographic:
+    - "state"
+    - "county_type"
+    - "health_service_area"
+    
+  temporal:
+    - "enrollment_month"
+    - "seasonal_indicators"
+    - "time_trends"
+
+# Outcome definition
+outcome:
+  name: "acute_care_utilization_12m"
+  definition: "Any emergency department visit or inpatient hospitalization within 12 months"
+  coding:
+    positive: 1
+    negative: 0
+    
+# Data preprocessing
+preprocessing:
+  missing_data:
+    strategy: "median"  # For continuous variables
+    categorical_strategy: "mode"  # For categorical variables
+    threshold: 0.1  # Maximum proportion of missing values allowed
+    
+  scaling:
+    method: "standardization"  # or "normalization"
+    fit_on_source: true
+    
+  categorical_encoding:
+    method: "one_hot"
+    drop_first: true
+    handle_unknown: "ignore"
+    
+  feature_selection:
+    method: "variance_threshold"
+    threshold: 0.01
+    
+# Data splitting
+data_splitting:
+  source_domain:
+    train_ratio: 0.7
+    validation_ratio: 0.15
+    test_ratio: 0.15
+    
+  target_domain:
+    support_ratio: 0.1  # For few-shot learning
+    query_ratio: 0.9
+    
+  stratify_by: "outcome"
+  
+# Quality checks
+quality_checks:
+  min_sample_size: 1000
+  min_outcome_rate: 0.05
+  max_outcome_rate: 0.95
+  max_missing_rate: 0.2
+  
+# Domain shift assessment
+domain_shift:
+  metrics:
+    - "mmd"  # Maximum Mean Discrepancy
+    - "wasserstein_distance"
+    - "kl_divergence"
+  visualization:
+    - "tsne"
+    - "pca"
+    - "feature_distributions"
+
