@@ -1,0 +1,26 @@
+MEDICAID TRANSFER LEARNING ANALYSIS SUMMARY
+==================================================
+
+Analysis completed: 2025-09-30 16:58:47
+
+Best performing model: meta_ensemble
+AUC: 0.702
+Youden's J: 0.309
+Sensitivity: 0.608
+Specificity: 0.701
+Precision: 0.411
+
+Statistically significant improvements: 11
+  target_only vs source_only: p = 0.000
+  prototypical_networks vs source_only: p = 0.000
+  domain_adversarial vs source_only: p = 0.008
+  causal_transfer vs source_only: p = 0.000
+  enhanced_maml vs source_only: p = 0.000
+  meta_ensemble vs source_only: p = 0.000
+  source_only vs target_only: p = 0.000
+  prototypical_networks vs target_only: p = 0.000
+  domain_adversarial vs target_only: p = 0.000
+  tabtransformer vs target_only: p = 0.000
+  enhanced_maml vs target_only: p = 0.000
+
+For detailed results, see the tables/ and figures/ directories.

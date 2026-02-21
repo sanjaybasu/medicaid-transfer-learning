@@ -1,0 +1,9 @@
+Model,EOD_race_ethnicity,worst_race_group,min_TPR_race,EOD_gender,EOD_age_group,TPR_american indian or alaska native,FPR_american indian or alaska native,n_american indian or alaska native,TPR_asian,FPR_asian,n_asian,TPR_black or african american,FPR_black or african american,n_black or african american,TPR_unknown,FPR_unknown,n_unknown,TPR_white,FPR_white,n_white
+enhanced_maml,0.3333,native hawaiian or other pacific islander,0.0,,0.0769,0.2273,0.1404,101,0.2336,0.1466,414,0.322,0.211,4846,0.1983,0.0938,782,0.3212,0.1954,4065
+source_only,0.5227,native hawaiian or other pacific islander,0.0,,0.099,0.5227,0.193,101,0.1028,0.0261,414,0.4255,0.2145,4846,0.1322,0.0197,782,0.341,0.1451,4065
+causal_transfer,0.6555,hispanic,0.0,,0.1359,0.4773,0.2632,101,0.4112,0.1629,414,0.6555,0.3314,4846,0.124,0.0121,782,0.5139,0.2425,4065
+target_only,0.6581,hispanic,0.0,,0.1318,0.4773,0.2632,101,0.4019,0.1531,414,0.6581,0.3331,4846,0.124,0.0136,782,0.5163,0.2447,4065
+meta_ensemble,0.6618,hispanic,0.0,,0.1241,0.4773,0.2632,101,0.3832,0.1498,414,0.6618,0.3427,4846,0.1322,0.0166,782,0.5234,0.2525,4065
+domain_adversarial,0.6696,native hawaiian or other pacific islander,0.0,,0.0831,0.4091,0.2456,101,0.3645,0.1368,414,0.6696,0.449,4846,0.281,0.1044,782,0.4766,0.2614,4065
+tabtransformer,0.6712,native hawaiian or other pacific islander,0.0,,0.1213,0.5227,0.2982,101,0.2804,0.114,414,0.6712,0.4385,4846,0.2727,0.0635,782,0.5052,0.2807,4065
+prototypical_networks,1.0,native hawaiian or other pacific islander,0.0,,0.4868,0.4091,0.4737,101,0.5607,0.5212,414,0.5442,0.5193,4846,0.5868,0.5401,782,0.5638,0.5271,4065
